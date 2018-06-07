@@ -18,7 +18,9 @@ app.use('/', jsonMiddleware);
 // Applying routes
 routes(app);
 
+let port = process.env.PORT || 5000;
+
 // Listening to port
-app.listen(3000, function () {
-    console.log("Node RestApi server is running on 3000 port.");
+app.listen(port, function () {
+    console.log("Node RestApi server is running on " + port + " port.");
 });
